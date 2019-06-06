@@ -1,4 +1,4 @@
-#include "iostream" //包含c++的头文件 //iostream.h
+#include <iostream> //包含c++的头文件 //iostream.h
 
 using namespace std; //使用命名空间 std 标准的命名空间 (在这个命名空间中定义了很多标准定义)
 

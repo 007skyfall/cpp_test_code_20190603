@@ -1,13 +1,16 @@
-CC=g++ 
-STRIP=strip
-OBJ=test_mystring
-OBJS=test_mystring.cpp mystring.cpp
-CFLAGS= -Wall -g -lm 
-$(OBJ):$(OBJS)
-	$(CC) $(CFLAGS) $^ -o $@
+SOURCE = $(wildcard *.cpp)
+TARGETS = $(patsubst %.cpp, %, $(SOURCE))
+ 
+CC = g++
+STRIP = strip
+CFLAGS = -Wall -g -O2
+ 
+all:$(TARGETS)
+ 
+$(TARGETS):%:%.cpp
+	$(CC) $< $(CFLAGS) -o $@
 	$(STRIP) $@
-$*.o:$%.c
-	$(CC) $(CFLAGS) -c $< -o $@ 
-.PHONY:clean
+ 
+.PHONY:clean all
 clean:
-	$(RM) *.o test_mystring
+	-rm -rf $(TARGETS)

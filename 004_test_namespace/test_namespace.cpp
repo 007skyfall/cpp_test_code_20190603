@@ -1,4 +1,5 @@
-#include "iostream"
+#include <iostream> //包含c++的头文件 //iostream.h
+
 using namespace std;
 
 //1 文件中iostream 没有引入标准的 std ; 需要我们程序员手工的写

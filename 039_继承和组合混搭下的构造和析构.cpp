@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -9,11 +8,11 @@ public:
 	{
 		this->a = a;
 		this->b = b;
-		cout<<"object¹¹Ôìº¯Êý Ö´ÐÐ "<<"a"<<a<<" b "<<b<<endl;
+		cout << "objectæž„é€ å‡½æ•° æ‰§è¡Œ " << "a = " << a << " b = " << b << endl;
 	}
 	~Object()
 	{
-		cout<<"objectÎö¹¹º¯Êý \n";
+		cout << "objectæžæž„å‡½æ•° \n";
 	}
 protected:
 	int a;
@@ -27,39 +26,39 @@ public:
 	Parent(char *p) : Object(1, 2)
 	{
 		this->p = p;
-		cout<<"¸¸Àà¹¹Ôìº¯Êý..."<<p<<endl;
+		cout << "çˆ¶ç±»æž„é€ å‡½æ•°..." << p << endl;
 	}
 	~Parent()
 	{
-		cout<<"Îö¹¹º¯Êý..."<<p<<endl;
+		cout << "æžæž„å‡½æ•°..." << p << endl;
 	}
 
 	void printP(int a, int b)
 	{
-		cout<<"ÎÒÊÇµù..."<<endl;
+		cout << "æˆ‘æ˜¯çˆ¹..." << endl;
 	}
 
 protected:
 	char *p;
-	
+
 };
 
 
 class child : public Parent
 {
 public:
-	child(char *p) : Parent(p) , obj1(3, 4), obj2(5, 6)
+	child(char *p) : Parent(p), obj1(3, 4), obj2(5, 6)
 	{
 		this->myp = p;
-		cout<<"×ÓÀàµÄ¹¹Ôìº¯Êý"<<myp<<endl;
+		cout << "å­ç±»çš„æž„é€ å‡½æ•°" << myp << endl;
 	}
 	~child()
 	{
-		cout<<"×ÓÀàµÄÎö¹¹"<<myp<<endl;
+		cout << "å­ç±»çš„æžæž„" << myp << endl;
 	}
 	void printC()
 	{
-		cout<<"ÎÒÊÇ¶ù×Ó"<<endl;
+		cout << "æˆ‘æ˜¯å„¿å­" << endl;
 	}
 protected:
 	char *myp;
@@ -70,12 +69,12 @@ protected:
 
 void objplay()
 {
-	child c1("¼Ì³Ð²âÊÔ");
+	child c1("ç»§æ‰¿æµ‹è¯•");
 }
 void main()
 {
 	objplay();
-	cout<<"hello..."<<endl;
+	cout << "hello..." << endl;
 	system("pause");
-	return ;
+	return;
 }

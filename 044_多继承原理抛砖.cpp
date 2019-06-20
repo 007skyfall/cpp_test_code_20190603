@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -8,7 +7,7 @@ class B
 public:
 	B()
 	{
-		cout<<"B¹¹Ôìº¯ÊýÖ´ÐÐ\n";
+		cout << "Bæž„é€ å‡½æ•°æ‰§è¡Œ\n";
 	}
 	int b;
 protected:
@@ -23,7 +22,7 @@ public:
 
 };
 
-class B2 :    public B //8
+class B2 : public B //8
 {
 public:
 	int b2;
@@ -35,18 +34,16 @@ public:
 	int c;
 };
 
-void main()
+void test03()
 {
-	cout<<sizeof(B)<<endl; //4
-	cout<<sizeof(B1)<<endl; //12 //¼ÓÉÏvirtualÒÔºó , C++±àÒëÆ÷»áÔÚ¸ø±äÁ¿ÍµÍµÔö¼ÓÊôÐÔ
-	cout<<sizeof(B2)<<endl;  //8
+	cout << sizeof(B) << endl; //4
+	cout << sizeof(B1) << endl; //12 //åŠ ä¸Švirtualä»¥åŽ , C++ç¼–è¯‘å™¨ä¼šåœ¨ç»™å˜é‡å·å·å¢žåŠ å±žæ€§
+	cout << sizeof(B2) << endl;  //8
 	//cout<<sizeof(B)<<endl;
-
-	system("pause");
 
 }
 
-void main1101()
+void test01()
 {
 
 	C  c1;
@@ -54,17 +51,17 @@ void main1101()
 	c1.b2 = 200;
 	c1.c = 300;
 
-	//c1.b = 500; //¼Ì³ÐµÄ¶þÒåÐÔ ºÍ Ðé¼Ì³Ð½â¾ö·½°¸
+	//c1.b = 500; //ç»§æ‰¿çš„äºŒä¹‰æ€§ å’Œ è™šç»§æ‰¿è§£å†³æ–¹æ¡ˆ
 	//c1.B1::b = 500;
 	//c1.B2::b = 500;
 
 
-	cout<<"hello..."<<endl;
+	cout << "hello..." << endl;
 	system("pause");
-	return ;
+	return;
 }
 
-class D1 
+class D1
 {
 public:
 	int k;
@@ -72,7 +69,7 @@ protected:
 private:
 };
 
-class D2 
+class D2
 {
 public:
 	int k;
@@ -81,18 +78,26 @@ private:
 
 };
 
-class E :  public D1,  public D2
+class E : public D1, public D2
 {
 public:
 protected:
 private:
 };
 
-void main1202()
+void test02()
 {
-	 E e1;
-	 e1.D1::k = 100;
-	 e1.D2::k = 200;
+	E e1;
+	e1.D1::k = 100;
+	e1.D2::k = 200;
 
 	system("pause");
+}
+
+int main()
+{
+	test01();
+	test02();
+	test03();
+	return 0;
 }

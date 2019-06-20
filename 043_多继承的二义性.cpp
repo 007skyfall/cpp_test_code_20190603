@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -42,8 +41,8 @@ void main()
 	//c1.B1::b = 500;
 	//c1.B2::b = 500;
 
-	
-	cout<<"hello..."<<endl;
+
+	cout << "hello..." << endl;
 	system("pause");
-	return ;
+	return;
 }

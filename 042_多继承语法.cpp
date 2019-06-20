@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -11,7 +10,7 @@ public:
 	}
 	void printB1()
 	{
-		cout<<"b1:"<<b1<<endl; 
+		cout << "b1:" << b1 << endl;
 	}
 protected:
 private:
@@ -27,7 +26,7 @@ public:
 	}
 	void printB2()
 	{
-		cout<<"b2:"<<b2<<endl; 
+		cout << "b2:" << b2 << endl;
 	}
 protected:
 private:
@@ -37,13 +36,13 @@ private:
 class B : public Base1, public Base2
 {
 public:
-	B(int b1, int b2, int c): Base1(b1), Base2(b2)
+	B(int b1, int b2, int c) : Base1(b1), Base2(b2)
 	{
 		this->c = c;
 	}
 	void printC()
 	{
-		cout<<"c:"<<c<<endl; 
+		cout << "c:" << c << endl;
 	}
 protected:
 private:
@@ -56,7 +55,7 @@ void main()
 	b1.printC();
 	b1.printB1();
 	b1.printB2();
-	cout<<"hello..."<<endl;
+	cout << "hello..." << endl;
 	system("pause");
-	return ;
+	return;
 }

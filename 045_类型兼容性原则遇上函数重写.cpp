@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -8,16 +7,16 @@ public:
 	Parent(int a)
 	{
 		this->a = a;
-		cout<<"Parent a"<<a<<endl;
+		cout << "Parent a" << a << endl;
 	}
 
-	virtual void print() //×ÓÀàµÄºÍ¸¸ÀàµÄº¯ÊıÃû×ÖÒ»Ñù
+	virtual void print() //å­ç±»çš„å’Œçˆ¶ç±»çš„å‡½æ•°åå­—ä¸€æ ·
 	{
-		cout<<"Parent ´òÓ¡ a:"<<a<<endl;
+		cout << "Parent æ‰“å° a:" << a << endl;
 	}
 protected:
 private:
-	int a ;
+	int a;
 };
 
 class Child : public Parent
@@ -26,11 +25,11 @@ public:
 	Child(int b) : Parent(10)
 	{
 		this->b = b;
-		cout<<"Child b"<<b<<endl;
+		cout << "Child b" << b << endl;
 	}
-	virtual void print() //virtual ¸¸ÀàĞ´ÁËvirtual,×ÓÀà¿ÉĞ´ ¿É²»Ğ´ 
+	virtual void print() //virtual çˆ¶ç±»å†™äº†virtual,å­ç±»å¯å†™ å¯ä¸å†™ 
 	{
-		cout<<"Child ´òÓ¡  b:"<<b<<endl;
+		cout << "Child æ‰“å°  b:" << b << endl;
 	}
 protected:
 private:
@@ -39,7 +38,7 @@ private:
 
 void howToPrint(Parent *base)
 {
-	base->print(); //Ò»ÖÖµ÷ÓÃÓï¾ä ÓĞ¶àÖÖ±íÏÖĞÎÌ¬...
+	base->print(); //ä¸€ç§è°ƒç”¨è¯­å¥ æœ‰å¤šç§è¡¨ç°å½¢æ€...
 }
 
 void howToPrint2(Parent &base)
@@ -48,28 +47,28 @@ void howToPrint2(Parent &base)
 }
 void main()
 {
-	
+
 	Parent	*base = NULL;
 	Parent	p1(20);
 	Child	c1(30);
 
 	base = &p1;
-	base->print(); //Ö´ĞĞ¸¸ÀàµÄ´òÓ¡º¯Êı
+	base->print(); //æ‰§è¡Œçˆ¶ç±»çš„æ‰“å°å‡½æ•°
 
 	base = &c1;
-	base->print(); //Ö´ĞĞË­µÄº¯Êı ?  //ÃæÏò¶ÔÏóĞÂĞèÇó
+	base->print(); //æ‰§è¡Œè°çš„å‡½æ•° ?  //é¢å‘å¯¹è±¡æ–°éœ€æ±‚
 
 
 	{
 		Parent &base2 = p1;
 		base2.print();
 
-		Parent &base3 = c1; //base3ÊÇc1 µÄ±ğÃû
+		Parent &base3 = c1; //base3æ˜¯c1 çš„åˆ«å
 		base3.print();
 	}
 
 
-	//º¯Êıµ÷ÓÃ
+	//å‡½æ•°è°ƒç”¨
 	howToPrint(&p1);
 	howToPrint(&c1);
 
@@ -78,8 +77,8 @@ void main()
 
 
 
-	
-	cout<<"hello..."<<endl;
+
+	cout << "hello..." << endl;
 	system("pause");
-	return ;
+	return;
 }

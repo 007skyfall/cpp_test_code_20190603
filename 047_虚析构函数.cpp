@@ -1,10 +1,8 @@
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 using namespace std;
 
-
-//ĞéÎö¹¹º¯Êı
+//è™šææ„å‡½æ•°
 class A
 {
 public:
@@ -14,9 +12,9 @@ public:
 		strcpy(p, "obja");
 		printf("A()\n");
 	}
-	 virtual ~A()
+	virtual ~A()
 	{
-		delete [] p;
+		delete[] p;
 		printf("~A()\n");
 	}
 protected:
@@ -33,9 +31,9 @@ public:
 		strcpy(p, "objb");
 		printf("B()\n");
 	}
-	  ~B()
+	~B()
 	{
-		delete [] p;
+		delete[] p;
 		printf("~B()\n");
 	}
 protected:
@@ -55,7 +53,7 @@ public:
 	}
 	~C()
 	{
-		delete [] p;
+		delete[] p;
 		printf("~C()\n");
 	}
 protected:
@@ -65,29 +63,29 @@ private:
 
 
 
-//Ö»Ö´ĞĞÁË ¸¸ÀàµÄÎö¹¹º¯Êı
-//ÏòÍ¨¹ı¸¸ÀàÖ¸Õë  °Ñ ËùÓĞµÄ×ÓÀà¶ÔÏóµÄÎö¹¹º¯Êı ¶¼Ö´ĞĞÒ»±é
-//ÏòÍ¨¹ı¸¸ÀàÖ¸Õë ÊÍ·ÅËùÓĞµÄ×ÓÀà×ÊÔ´ 
+//åªæ‰§è¡Œäº† çˆ¶ç±»çš„ææ„å‡½æ•°
+//å‘é€šè¿‡çˆ¶ç±»æŒ‡é’ˆ  æŠŠ æ‰€æœ‰çš„å­ç±»å¯¹è±¡çš„ææ„å‡½æ•° éƒ½æ‰§è¡Œä¸€é
+//å‘é€šè¿‡çˆ¶ç±»æŒ‡é’ˆ é‡Šæ”¾æ‰€æœ‰çš„å­ç±»èµ„æº 
 void howtodelete(A *base)
 {
-	delete base;  //Õâ¾ä»°²»»á±íÏÖ³É¶àÌ¬ ÕâÖÖÊôĞÔ
+	delete base;  //è¿™å¥è¯ä¸ä¼šè¡¨ç°æˆå¤šæ€ è¿™ç§å±æ€§
 }
 
 /*
 void howtodelete(B *base)
 {
-	delete base;  //Õâ¾ä»°²»»á±íÏÖ³É¶àÌ¬ ÕâÖÖÊôĞÔ
+delete base;  //è¿™å¥è¯ä¸ä¼šè¡¨ç°æˆå¤šæ€ è¿™ç§å±æ€§
 }
 */
 void main()
 {
-	C *myC = new C; //new deleteÆ¥Åä
+	C *myC = new C; //new deleteåŒ¹é…
 	//
-	delete myC; //Ö±½ÓÍ¨¹ı×ÓÀà¶ÔÏóÊÍ·Å×ÊÔ´ ²»ĞèÒªĞ´virtual 
+	delete myC; //ç›´æ¥é€šè¿‡å­ç±»å¯¹è±¡é‡Šæ”¾èµ„æº ä¸éœ€è¦å†™virtual 
 
 	//howtodelete(myC);
-	
-	cout<<"hello..."<<endl;
+
+	cout << "hello..." << endl;
 	system("pause");
-	return ;
+	return;
 }
